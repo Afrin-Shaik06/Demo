@@ -1,0 +1,45 @@
+anomaly_schema:
+  description: "Schema defining detected anomalies from log analytics system"
+  fields:
+
+    - name: anomalyId
+      type: string
+      description: "Unique identifier for anomaly event"
+
+    - name: detectedAt
+      type: datetime
+      format: "%Y-%m-%dT%H:%M:%S"
+      description: "Timestamp when anomaly was detected"
+
+    - name: anomalyType
+      type: string
+      description: "Type of anomaly (LatencySpike, ErrorBurst, NodeFailure, etc.)"
+
+    - name: severity
+      type: string
+      allowed_values:
+        - LOW
+        - MEDIUM
+        - HIGH
+        - CRITICAL
+      description: "Impact level of anomaly"
+
+    - name: affectedService
+      type: string
+      description: "Service or component impacted"
+
+    - name: affectedHost
+      type: string
+      description: "Host/node where anomaly occurred"
+
+    - name: metricValue
+      type: float
+      description: "Observed metric value triggering anomaly"
+
+    - name: threshold
+      type: float
+      description: "Expected threshold value"
+
+    - name: description
+      type: string
+      description: "Human-readable explanation of anomaly"

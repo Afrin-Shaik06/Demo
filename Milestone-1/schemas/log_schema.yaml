@@ -1,0 +1,44 @@
+log_schema:
+  description: "Schema defining structure of high-throughput system logs"
+  fields:
+
+    - name: timestamp
+      type: datetime
+      format: "%Y-%m-%dT%H:%M:%S"
+      description: "Time at which the log event occurred"
+
+    - name: logLevel
+      type: string
+      allowed_values:
+        - DEBUG
+        - INFO
+        - WARNING
+        - ERROR
+        - CRITICAL
+      description: "Severity level of the log"
+
+    - name: serviceName
+      type: string
+      description: "Name of microservice or component generating the log"
+
+    - name: host
+      type: string
+      description: "Machine or node producing the log"
+
+    - name: eventType
+      type: string
+      description: "Category of event (REQUEST, RESPONSE, DB_CALL, etc.)"
+
+    - name: message
+      type: string
+      description: "Human-readable log message"
+
+    - name: latencyMs
+      type: integer
+      required: false
+      description: "Optional latency measurement for performance tracking"
+
+    - name: statusCode
+      type: integer
+      required: false
+      description: "Optional status code for requests/events"
