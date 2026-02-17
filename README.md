@@ -1,21 +1,39 @@
-# Infosys Springboard Internship – Task 1
+# High Throughput Log Analytics & Logistic System
 
-This project demonstrates the creation and processing of a large dataset using Python.
+## 📌 Overview
+This project models a distributed log analytics system designed to handle high-throughput log streams.  
+It demonstrates schema design, system architecture, and distributed processing concepts using Dask and Ray.
 
-## Task Objective
-- Generate a CSV file with 1,000,000 rows
-- Columns: id, name, age, salary, department
-- Load the dataset using Dask
-- Display first 10 rows
-- Show number of partitions
+## 🧩 Components
+• Log Sources – Servers / Applications generating logs  
+• Ingestion Layer – Distributed ingestion using Dask / Ray  
+• Processing Engine – Parsing & analytics  
+• Anomaly Detection – Identifying unusual patterns  
+• Storage – Centralized log storage  
+• Monitoring – Dashboards & alerts  
 
-## Technologies Used
-- Python
-- Pandas
-- Dask
-- Faker
+## 📂 Folder Structure
+Milestone-1/
+│── schemas/
+│   ├── log_schema.yaml
+│   └── anomaly_schema.yaml
+│
+│── diagrams/
+│   ├── system_architecture.png
+│   └── data_flow.png
+│
+│── docs/
+│   └── architecture.md
 
-## Description
-A synthetic employee dataset was generated using Pandas and Faker. 
-Dask was used to efficiently load and handle the large CSV file, simulating scalable data processing.
+## 🛠 Technologies Used
+• Python  
+• Dask  
+• Ray  
+• YAML  
+• draw.io
 
+## ✅ Milestone-1 Deliverables
+✔ Log Schema Definition  
+✔ Anomaly Schema Definition  
+✔ System Architecture Diagram  
+✔ Data Flow Diagram
