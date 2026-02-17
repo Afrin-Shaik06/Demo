@@ -1,45 +1,43 @@
+version: 1.0
+description: Schema defining detected anomalies from log analytics system
+
 anomaly_schema:
-  description: "Schema defining detected anomalies from log analytics system"
   fields:
 
-    - name: anomalyId
+    - name: anomaly_id
       type: string
-      description: "Unique identifier for anomaly event"
+      description: Unique identifier for anomaly event
 
-    - name: detectedAt
+    - name: detected_at
       type: datetime
       format: "%Y-%m-%dT%H:%M:%S"
-      description: "Timestamp when anomaly was detected"
+      description: Timestamp when anomaly was detected
 
-    - name: anomalyType
+    - name: anomaly_type
       type: string
-      description: "Type of anomaly (LatencySpike, ErrorBurst, NodeFailure, etc.)"
+      description: Type of anomaly (LatencySpike, ErrorBurst, NodeFailure, etc.)
 
     - name: severity
       type: string
-      allowed_values:
-        - LOW
-        - MEDIUM
-        - HIGH
-        - CRITICAL
-      description: "Impact level of anomaly"
+      allowed_values: [LOW, MEDIUM, HIGH, CRITICAL]
+      description: Impact level of anomaly
 
-    - name: affectedService
+    - name: affected_service
       type: string
-      description: "Service or component impacted"
+      description: Service or component impacted
 
-    - name: affectedHost
+    - name: affected_host
       type: string
-      description: "Host/node where anomaly occurred"
+      description: Host/node where anomaly occurred
 
-    - name: metricValue
+    - name: metric_value
       type: float
-      description: "Observed metric value triggering anomaly"
+      description: Observed metric value triggering anomaly
 
     - name: threshold
       type: float
-      description: "Expected threshold value"
+      description: Expected threshold value
 
     - name: description
       type: string
-      description: "Human-readable explanation of anomaly"
+      description: Human-readable explanation of anomaly
