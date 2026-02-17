@@ -32,8 +32,9 @@ Milestone-1/
 • YAML  
 • draw.io
 
-## ✅ Milestone-1 Deliverables
-✔ Log Schema Definition  
-✔ Anomaly Schema Definition  
-✔ System Architecture Diagram  
-✔ Data Flow Diagram
+## Milestone-1 Deliverables
+• Log Schema Definition (log_schema.yaml)  
+• Anomaly Schema Definition (anomaly_schema.yaml)  
+• System Architecture Diagram (system_architecture.png)  
+• Data Flow Diagram (data_flow.png)
+
